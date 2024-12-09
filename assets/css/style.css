@@ -1,0 +1,1847 @@
+/* Font Family */
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Font Family Ozik */
+@font-face {
+    font-family: "myfont";
+    src: url(../Fonts/OZIKSoft-Regular.woff2);
+}
+
+/* Css Styles */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-family: var(--primary-font);
+    font-size: 18px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+:root {
+    /* Color */
+    --primary-color: #80397C;
+    --secondary-color: #FFFFFF;
+    --success-color: #EBDDFF;
+    --warning-color: #4F184C;
+    --danger-color: #F8EEE1;
+
+
+    /* font-family */
+    --primary-font: "Work Sans", sans-serif;
+    --secondary-font: 'myfont';
+    --third-font: Barlow;
+}
+
+/* btn Property */
+
+.btn {
+    font-size: 18px !important;
+    font-weight: 500;
+    line-height: 21px;
+}
+
+.btn-first {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 4px 9px #953F98;
+    border-radius: 50px !important;
+    border: 1.5px solid #953F98 !important;
+}
+
+.btn-first:active {
+    box-shadow: 1px 2px #953F98;
+    transform: translatey(4px);
+}
+
+.btn-secondary {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px !important;
+}
+
+/* Loader */
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.493);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#load {
+    font-size: 24px;
+    color: var(--primary-color);
+    width: 5rem;
+    height: 5rem;
+}
+
+/* Heading  */
+
+.heading1 {
+    font-size: 150px;
+    font-weight: 700;
+    line-height: 142px;
+}
+
+.heading2 {
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 35px;
+}
+
+.heading3 {
+    font-size: 103px;
+    font-weight: 700;
+    line-height: 123px;
+}
+
+.heading4 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 31px;
+    font-style: italic;
+}
+
+/* TEXT */
+
+.primary-text {
+    font-size: 30px;
+    line-height: 35px;
+    font-weight: 700;
+}
+
+/* container */
+.container {
+    max-width: 1640px !important;
+    margin: auto;
+}
+
+/* Topnav */
+#Topbar {
+    font-family: var(--primary-font);
+}
+
+.top-nav {
+    background-color: #F0494A;
+}
+
+.topnav {
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    text-align: center;
+}
+
+#Topbar .main-topnav {
+    height: 52px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Topbar .main-topnav p {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 15px;
+    margin-bottom: 0px;
+}
+
+#Navbar .btn-toggle {
+    display: none;
+}
+
+
+
+/* Hader */
+
+#Navbar {
+    background-color: var(--success-color) !important;
+}
+
+.navbar {
+    height: 129px;
+}
+
+#Navbar .btn {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 2px;
+}
+
+.navbar-nav .nav-link.active {
+    color: var(--primary-color) !important;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 25px;
+    font-family: var(--primary-font);
+}
+
+.btn1 {
+    width: 229px;
+    height: 65px;
+    color: var(--primary-color) !important;
+    background-color: #FFCD00 !important;
+}
+
+#Navbar ul li {
+    margin-right: 40px;
+}
+
+#Navbar .navbar-toggler-icon {
+    background-image: url(../images/hmbg.png);
+}
+
+.navbar-toggler {
+    border: 0px solid transparent !important;
+}
+
+.offcanvas,
+.offcanvas-end {
+    display: none !important;
+    padding: 30px 50px;
+    width: 100% !important;
+    background-color: var(--success-color) !important;
+}
+
+#Navbar .btn-close {
+    font-size: 36px;
+}
+
+#ul-mobile {
+    display: none;
+}
+
+#Navbar .nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+#Navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    border-radius: 10px;
+    background: var(--primary-color);
+    background-size: 200% auto;
+    transition: all .5s;
+    transform: translateX(-100%);
+}
+
+#Navbar .nav-link:hover::after {
+    transform: translateX(0%);
+    animation: gradient-89 3s linear infinite;
+}
+
+/* hero */
+
+#hero {
+    position: relative;
+    z-index: 0;
+    background-image: url(../images/hero.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 55px 0px 178px 0px;
+}
+
+#hero .heading1 {
+    font-family: var(--secondary-font);
+    max-width: 100%;
+    text-align: center;
+    color: var(--secondary-color);
+    position: relative;
+    animation: HeroHeading-animate;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    right: 200vh;
+}
+
+@keyframes HeroHeading-animate {
+    From {
+        left: 200vh;
+    }
+
+    to {
+        left: 0vh;
+    }
+}
+
+#hero .main-hero-h {
+    margin: 56px auto 160px auto;
+}
+
+#hero .img-b-mobi {
+    display: none;
+}
+
+/* banner */
+
+#Hero-banner {
+    max-width: 1642px;
+    height: 223px;
+    border-radius: 25px;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+    background-color: var(--danger-color);
+    position: relative;
+    animation: Hero-animate;
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    left: -200vh;
+}
+
+@keyframes Hero-animate {
+    From {
+        left: -200vh;
+    }
+
+    to {
+        left: 0vh;
+    }
+}
+
+#b1 .heading2 {
+    text-align: center;
+    font-size: 103px;
+    line-height: 123px;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    color: #DC434A;
+    text-transform: uppercase;
+}
+
+#b1 {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+#b1 h3 {
+    color: var(--primary-color) !important;
+}
+
+#b1 span {
+    color: var(--primary-color);
+}
+
+#b2 {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+}
+
+#b2 .primary-text {
+    font-size: 50px;
+    line-height: 60px;
+    font-weight: 700;
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+#b2 .btn9 {
+    width: 287px;
+    height: 65px;
+    color: #954198;
+    font-weight: 700;
+    font-size: 17px;
+    font-family: var(--primary-font);
+    background-color: transparent;
+    border: 2px solid var(--primary-color);
+    /* Left To Right */
+    background: linear-gradient(to left, transparent 50%, var(--primary-color)50%) right;
+    background-size: 200%;
+    transition: .5s ease-out;
+}
+
+#b2 .btn9:hover {
+    background-position: left;
+    color: var(--secondary-color);
+}
+
+/* customer section */
+
+#cus-container {
+    max-width: 1800px !important;
+}
+
+#customer {
+    position: relative;
+    z-index: 2;
+    background-color: var(--warning-color);
+    padding: 0px 0px 100px 0px;
+    margin: -1px 0px 0px 0px;
+}
+
+#customer .card-job {
+    width: 834px;
+    height: 336px;
+    border-radius: 25px;
+    text-align: center;
+    border: 3px solid var(--primary-color);
+    margin: -200px auto 0px auto;
+    padding: 110px 0px 73px 0px;
+    background-color: var(--danger-color);
+}
+
+#customer h2 {
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 25px;
+}
+
+#customer p {
+    max-width: 549px;
+    margin: auto;
+    font-family: Work Sans;
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 35.19px;
+    color: var(--warning-color);
+}
+
+#customer-cnt1 .heading2 {
+    text-align: center;
+    color: #F0494A;
+}
+
+.customer-heading {
+    max-width: 543px;
+    margin: 88px auto 78px auto;
+}
+
+#testimonial .card-testimonial {
+    max-width: 370px;
+    height: 185px;
+    margin: auto;
+    color: #ffffff;
+}
+
+#testimonial .heading4 {
+    font-family: Barlow;
+}
+
+#testimonial p {
+    font-family: Barlow;
+    font-size: 16.38px;
+    font-style: italic;
+    font-weight: 700;
+    line-height: 19.65px;
+    margin: 20px 0px 0px 0px;
+    color: #ffffff;
+}
+
+#testimonial span {
+    font-weight: 400;
+}
+
+#testimonial .fa-star {
+    color: #FFCF71;
+}
+
+/* owl caresoule arrow */
+#testimonial .arrow {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #333;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+#testimonial .fa-less-than,
+.fa-greater-than {
+    font-size: 50px;
+    color: #DC434A;
+}
+
+#testimonial .owl-theme .owl-nav [class*=owl-]:hover {
+    background: transparent !important;
+}
+
+#testimonial .owl-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+#testimonial .owl-nav .owl-prev {
+    position: relative;
+    left: -10px;
+}
+
+#testimonial .owl-nav .owl-next {
+    position: relative;
+    right: -10px;
+}
+
+#testimonial .owl-theme .owl-dots .owl-dot {
+    display: none !important;
+}
+
+/* Store */
+
+#store input:focus {
+    border: 1.5px solid Black;
+}
+
+#store {
+    background-color: var(--danger-color);
+    padding: 70px 0px 62px 0px;
+}
+
+#store .btn3 {
+    width: 287px;
+    height: 65px;
+    color: #954198;
+    background-color: var(--success-color) !important;
+}
+
+#store .heading2 {
+    line-height: 72px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    font-family: var(--primary-font);
+}
+
+#store-desk .store-col1 {
+    width: 389px;
+    margin: auto;
+    position: relative;
+}
+
+#store P {
+    color: var(--primary-color);
+    margin: 0px 0px 30px 0px;
+}
+
+#store span {
+    font-weight: 500 !important;
+}
+
+
+#store-mobi {
+    display: none;
+}
+
+
+
+/* joyleaf */
+
+#joyleaf {
+    background-image: url(../images/joyleaf-desk-1.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    margin: -1px 0px 0px 0px;
+}
+
+#joy-heading {
+    display: block;
+    max-width: 100%;
+}
+
+#joy-content {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 70px;
+    margin: 1300px 0px 50px 0px;
+}
+
+#joy-content .heading2 {
+    text-align: center;
+    padding: 0px 0px 0px 0px !important;
+}
+
+#joy-heading .heading2 {
+    font-family: var(--secondary-font);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 78px 0px 120px 0px;
+}
+
+
+#store-desk .heading2 {
+    font-family: var(--secondary-font);
+    color: var(--primary-color);
+    padding: 0px 0px !important;
+}
+
+#joy-content .card-joyleaf {
+    width: 591px;
+    height: 300px;
+    margin: auto;
+}
+
+#joy-content .heading2 {
+    font-family: var(--secondary-font);
+    line-height: 72px;
+    color: var(--primary-color);
+}
+
+#card-joyleaf .heading2 {
+    padding: 0px 0px;
+}
+
+#joy-content .primary-text {
+    max-width: 370px;
+    margin: 20px auto 0px auto;
+    line-height: 28px;
+    font-size: 25px;
+    font-weight: 500;
+    text-align: center;
+    color: var(--primary-color);
+}
+
+/* Joyride */
+#joyride {
+    background-image: url(../images/joyride.png);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 100px 0px;
+    margin: -1px 0px 0px 0px;
+}
+
+
+#joyride .heading2 {
+    line-height: 62px;
+    text-align: center;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+}
+
+#joyride li {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 29px;
+    color: var(--primary-color);
+    font-family: var(--primary-font);
+}
+
+#joyride ul {
+    max-width: 535px;
+    margin: 24px auto 50px auto;
+}
+
+#joyride .joyride-btn p {
+    max-width: 440px;
+    margin: 0px auto 0px auto;
+    color: red;
+}
+
+#joyride .form-joyride {
+    background-color: var(--secondary-color);
+    max-width: 822px;
+    height: auto;
+    padding: 50px;
+    border-radius: 30px;
+    border: 3px solid #954198;
+}
+
+
+#joyride .txtinput {
+    color: var(--primary-color) !important;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid var(--primary-color);
+    box-shadow: none;
+    max-width: 481px;
+    height: 65px;
+    margin: 0px auto 5px auto;
+}
+
+#joyride .btn5 {
+    color: var(--primary-color);
+    font-weight: 500;
+    background-color: var(--success-color);
+    max-width: 481px;
+    height: 65px;
+    margin: auto;
+}
+
+#btnjoy-shop .btn6 {
+    color: #954198;
+    width: 229px;
+    height: 65px;
+    background-color: var(--success-color);
+    margin: 0px auto 100px auto;
+}
+
+#joyride img {
+    padding: 180px 0px 0px 0px;
+}
+
+/* Shop Categorie */
+
+#categories {
+    background-color: var(--danger-color);
+    padding: 100px 0px;
+}
+
+#categories .heading2 {
+    font-family: var(--secondary-font);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 31px;
+    text-align: center;
+    padding: 0px 0px 100px 0px;
+    color: var(--primary-color);
+}
+
+#shop-catcard .heading2 {
+    font-family: var(--secondary-font);
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 36px;
+    color: var(--primary-color);
+    padding: 35px 0px 0px 0px;
+    text-align: left;
+}
+
+#categories .primary-text {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    color: var(--warning-color);
+    width: 232px;
+    height: 133px;
+}
+
+#categories .card-shop {
+    max-width: 300px;
+}
+
+#shop-catcard {
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+}
+
+#shop-catcard .btn7 {
+    color: #954198;
+    width: 229px;
+    height: 65px;
+    background-color: var(--success-color);
+}
+
+#shop-catcard img {
+    height: 100px;
+}
+
+/* Weekly discounts */
+
+#discounts {
+    background-image: url(../images/discountbanner.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-size: cover;
+    padding: 100px 0px;
+    margin: -1px 0px 0px 0px;
+}
+
+#discounts .heading2 {
+    color: var(--secondary-color);
+    font-family: var(--secondary-font);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+#discounts .primary-text {
+    color: var(--secondary-color);
+    max-width: 990px;
+    font-size: 35px;
+    line-height: 41px;
+    font-weight: 500;
+    text-align: center;
+    margin: 50px auto 35px auto;
+}
+
+#discounts .btn8 {
+    color: #954198;
+    width: 229px;
+    height: 65px;
+    background-color: var(--success-color);
+    margin: auto;
+}
+
+/* Joyleafdispensary section */
+#joydispensary {
+    background-color: var(--secondary-color);
+    padding: 100px 0px;
+}
+
+#joydispensary .heading2 {
+    color: var(--primary-color);
+    font-family: var(--secondary-font);
+    font-size: 60px;
+    font-weight: 700;
+    line-height: 72px;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+
+#joydispensary .btn8 {
+    color: #954198;
+    width: 229px;
+    height: 65px;
+    background-color: var(--success-color);
+    margin: auto;
+}
+
+#joydispensary .img-dis {
+    margin: 46px 0px 54px 0px;
+}
+
+input::placeholder {
+    color: var(--primary-color) !important;
+    font-weight: 500;
+}
+
+/* Footer */
+
+footer {
+    background-color: var(--warning-color);
+}
+
+#footer .img-logo-footer {
+    max-width: 539px;
+    margin: 36px auto 36px auto;
+}
+
+#footer hr {
+    margin: 0px 0px;
+    border-bottom: 2px solid #F8EEE1 !important;
+}
+
+#foot2 {
+    padding: 58px 0px 39px 0px;
+}
+
+#footr {
+    display: flex;
+    justify-content: end;
+    gap: 76px;
+}
+
+#footr a {
+    color: #ffffff;
+}
+
+#footr .foot-icon li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    background-color: var(--primary-color);
+    padding: 2px 4px 4px 9px;
+    margin: 0px 0px;
+    border-radius: 50%;
+}
+
+#foot-icon {
+    font-size: 15px;
+}
+
+#foot2 span {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    color: var(--secondary-color);
+    font-family: var(--primary-font);
+}
+
+#footr .foot-plice li a {
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #F0494A;
+    text-decoration: none;
+    font-family: var(--primary-font);
+}
+
+.img-foot-mobile {
+    display: none;
+}
+
+#btn-shop-mobile {
+    display: none !important;
+}
+
+#img-logo-mobi {
+    display: none;
+}
+
+.btn2 {
+    width: 120px;
+    height: 34px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #ffffff !important;
+    background-color: #80397C !important;
+}
+
+/* Animation */
+@keyframes appear {
+    from {
+        opacity: 0;
+        clip-path: inset(0% 0% 100% 0%);
+    }
+
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+.txtinput,
+.card-shop,
+.img-dis {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+.store-col1,
+.store-col2 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 15%;
+}
+
+#discounts .primary-text {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+#store .heading2,
+.primary-text,
+.btn3 {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+.card-joyleaf {
+    animation: appear ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 45%;
+}
+
+
+/* Responsive */
+@media only screen and (max-width: 1600px) {
+    #b1 .heading2 {
+        font-size: 90px;
+    }
+
+    #joy-content {
+        display: grid;
+        grid-template-columns: auto auto;
+        margin: 808px 0px 20px 0px;
+    }
+
+    #joy-content .heading2 {
+        font-size: 50px;
+        line-height: 55px;
+    }
+
+    #customer {
+        padding: 0px 0px 0px 0px;
+    }
+
+    #joyleaf {
+        padding: 120px 0px 0px 0px;
+    }
+
+    #joy-heading .heading2 {
+        padding: 118px 0px 750px 0px;
+    }
+
+    #joyride .heading2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    #joyride ul {
+        max-width: 535PX;
+        margin: 24px auto 50px auto;
+    }
+
+    .row {
+        padding: 0px 20px;
+    }
+
+    #hero .heading1 {
+        animation-delay: 2s;
+        right: 110vh;
+    }
+
+    @keyframes HeroHeading-animate {
+        From {
+            left: 110vh;
+        }
+
+        to {
+            left: 0vh;
+        }
+    }
+
+    #Hero-banner {
+        animation-delay: 2s;
+        left: -110vh;
+    }
+
+    @keyframes Hero-animate {
+        From {
+            left: -110vh;
+        }
+
+        to {
+            left: 0vh;
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px) and (max-width: 1439px) {
+    #b1 .heading2 {
+        font-size: 74px;
+        line-height: 100px;
+    }
+
+    #Hero-banner {
+        padding: 15px 0px;
+    }
+
+    #Navbar ul li {
+        margin-right: 5px;
+    }
+}
+
+
+@media only screen and (max-width: 1440px) {
+    #categories .row {
+        padding: 0px 20px;
+    }
+
+    #shop-catcard {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        gap: 50px 0px;
+    }
+
+    #categories .card-shop {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    #joy-content {
+        display: block;
+        grid-template-columns: auto;
+        margin: 808px 0px 20px 0px;
+    }
+}
+
+@media only screen and (max-width: 1199px) {
+
+    /* Navbar */
+    #Navbar .navbar-toggler-icon {
+        font-size: 45px;
+    }
+
+    #Navbar .btn-toggle {
+        display: block;
+    }
+
+    #Navbar .nav-link {
+        padding: 15px 25px;
+    }
+
+    .offcanvas,
+    .offcanvas-end {
+        display: block !important;
+    }
+
+    #navbarTogglerDemo01 {
+        display: none;
+    }
+
+    #ul-mobile {
+        display: block;
+    }
+
+    #testimonial p {
+        margin: 10px 0px 0px 0px;
+    }
+
+    #b1 .heading2 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    #Hero-banner {
+        padding: 30px 0px;
+    }
+
+    #joyride li {
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #hero h1 {
+        font-size: 109px;
+        line-height: 120px;
+    }
+
+    #joyride img {
+        padding: 100px 0px 0px 0px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+
+    #b1 .heading2 {
+        font-size: 44px;
+        line-height: 60px;
+    }
+
+    #b2 .primary-text {
+        font-size: 35px;
+    }
+
+    #Hero-banner {
+        height: 190px;
+        padding: 20px 0px;
+    }
+
+    #hero h1 {
+        font-size: 80px;
+        line-height: 90px;
+    }
+
+    #joyride .form-joyride {
+        padding: 30px !important;
+    }
+
+    #joydispensary .heading2 {
+        font-size: 42px;
+        line-height: 100px;
+    }
+
+    #customer .card-job {
+        width: 100%;
+    }
+
+    #joyride .heading2 {
+        font-size: 24px;
+        line-height: 30px;
+    }
+
+    #shop-catcard {
+        grid-template-columns: auto auto;
+    }
+
+    #footl {
+        width: 50%;
+    }
+
+    #footr {
+        width: 50%;
+        display: block;
+    }
+
+    #footr .list-inline {
+        margin-bottom: 0px;
+    }
+
+    #foot2 {
+        display: flex;
+
+    }
+}
+
+@media only screen and (max-width: 767px) {
+
+    #b1 {
+        display: block;
+    }
+
+    #b2 {
+        display: block;
+    }
+
+    #b1 .heading2 {
+        font-size: 60px;
+        line-height: 52px;
+    }
+
+    #b2 .primary-text {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    #Hero-banner {
+        height: auto;
+        padding: 10px 0px;
+    }
+
+    #b2 .btn9 {
+        height: 53px;
+        margin: auto;
+    }
+
+    #hero h1 {
+        font-size: 75px;
+        line-height: 100px;
+    }
+
+    .heading1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    #customer {
+        padding: 0px 0px 0px 0px;
+    }
+
+    /* store */
+    #store {
+        background-color: var(--warning-color);
+        padding: 50px 0px;
+        margin: -1px 0px 0px 0px;
+    }
+
+    #store-desk {
+        display: none;
+    }
+
+    #store-mobi {
+        display: block;
+    }
+
+    #store .card-store {
+        width: 630px;
+        height: 502px;
+        border-radius: 25px;
+        text-align: center;
+        border: 3px solid var(--primary-color);
+        margin: 0px auto 0px auto;
+        padding: 35px 0px 35px 0px;
+        background-color: var(--danger-color);
+    }
+
+    #store .heading2 {
+        font-size: 63px;
+        line-height: 65px;
+        margin-bottom: 10px;
+    }
+
+    #store .primary-text {
+        max-width: 403px;
+        margin: auto;
+        font-size: 22px;
+        line-height: 26px;
+        text-align: left;
+    }
+
+
+    #store P {
+        margin: 0px 0px 20px 0px;
+    }
+
+    #store .btn3 {
+        height: 53px;
+        margin: auto;
+    }
+
+    #joy-content .card-joyleaf {
+        height: 260px;
+    }
+
+
+    #joyride img {
+        padding: 0px 0px 0px 0px;
+    }
+
+    /* joyleaf */
+
+    #joyleaf {
+        padding: 0px 0px 0px 0px;
+    }
+
+    #joyride .form-joyride {
+        height: auto;
+        margin: 50px 0px 0px 0px;
+    }
+
+    #joy-content .card-joyleaf {
+        width: 100% !important;
+        margin: 0px 0px 25px 0px;
+    }
+
+    /* Animation */
+    .txtinput,
+    .card-shop,
+    .img-dis {
+        animation-range: entry 0% cover 25%;
+    }
+
+    .store-col1,
+    .store-col2 {
+        animation-range: entry 0% cover 20%;
+    }
+
+    #discounts .primary-text {
+        animation-range: entry 0% cover 25%;
+    }
+
+    #store .heading2,
+    .primary-text {
+        animation-range: entry 0% cover 25%;
+    }
+
+    .card-joyleaf {
+        animation-range: entry 0% cover 0%;
+    }
+
+}
+
+@media only screen and (max-width: 575px) {
+
+    #btn-shop-mobile {
+        display: flex !important;
+    }
+
+    #Navbar .navbar-toggler-icon {
+        font-size: 15px;
+    }
+
+    .offcanvas,
+    .offcanvas-end {
+        padding: 15px 25px;
+    }
+
+    #Navbar .btn-close {
+        font-size: 24px;
+    }
+
+    #b2 .primary-text {
+        font-size: 30px;
+        line-height: 40px;
+    }
+
+    .btn {
+        font-size: 15px !important;
+        font-weight: 500;
+        line-height: 21px;
+    }
+
+    /* Heading */
+    .heading1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+
+    .heading2 {
+        font-size: 35px;
+    }
+
+    .heading3 {
+        font-size: 60px;
+        line-height: 52px;
+    }
+
+    .heading4 {
+        font-size: 29px;
+    }
+
+    /* text */
+    .primary-text {
+        font-size: 15px;
+        line-height: 10px;
+    }
+
+    /* Navbar */
+    #Topbar .main-topnav p {
+        font-size: 14px;
+        line-height: 17px;
+        max-width: 271px;
+    }
+
+    .navbar {
+        height: 56px;
+    }
+
+
+    /* Hero */
+    #hero {
+        background-image: url(../images/hero-mobi.png);
+        padding: 32px 0px 80px 0px;
+        background-position: center center;
+    }
+
+    #hero h1 {
+        font-size: 60px;
+        line-height: 55px;
+    }
+
+
+    #hero .img-b-desk {
+        display: none;
+    }
+
+    #hero .img-b-mobi {
+        display: block;
+    }
+
+    #hero .main-hero-h {
+        margin: 20px auto 20px auto;
+    }
+
+
+    /* customer */
+    #customer .card-job {
+        width: 445px;
+        height: 153px;
+        margin: -20px auto 0px auto;
+        padding: 22px 0px 22px 0px;
+    }
+
+    #customer p {
+        max-width: 245px;
+        font-size: 18px;
+        line-height: 21px;
+        color: var(--warning-color);
+    }
+
+    #customer h2 {
+        margin-bottom: 4px;
+    }
+
+    #testimonial p {
+        max-width: 457px;
+        color: #ffffff !important;
+        text-align: center;
+    }
+
+    /* store */
+    #store .heading2 {
+        margin-bottom: 7px;
+    }
+
+    #store .card-store {
+        width: 532px;
+        height: 250px;
+        padding: 10px 0px 10px 0px;
+    }
+
+    #store P {
+        margin: 0px 0px 10px 0px;
+    }
+
+    #store .heading2 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-bottom: 10px;
+    }
+
+    #store .primary-text {
+        max-width: 346px;
+        margin: auto;
+        font-size: 15px;
+        line-height: 15px;
+        text-align: left;
+    }
+
+    /* joyleaf */
+
+    #joyleaf {
+        background-image: url(../images/download-mobi.png);
+    }
+
+    #joy-content .heading2 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    #joy-content .card-joyleaf {
+        height: 200px;
+    }
+
+    #joy-content {
+        margin: 960px 0px 0px 0px;
+        display: block;
+        height: auto;
+    }
+
+    #joyride img {
+        padding: 0px 0px 0px 0px;
+    }
+
+    #joyride .heading2 {
+        font-size: 25px;
+        font-weight: 900;
+        line-height: 29px;
+    }
+
+    #joy-heading .heading2 {
+        font-size: 40px;
+        line-height: 35px;
+        padding: 42px 0px 0px 0px;
+    }
+
+    #btnjoy-shop .btn6 {
+        margin: 0px auto 50px auto;
+    }
+
+    #joy-content .primary-text {
+        max-width: 300px;
+        line-height: 21px;
+        font-size: 18px;
+    }
+
+    #joy-content .card-joyleaf {
+        margin: 0px 0px 5px 0px;
+    }
+
+    #joyride .joyride-btn p {
+        max-width: 390px;
+    }
+
+    /* CATEGORIES */
+    #shop-catcard {
+        grid-template-columns: auto;
+    }
+
+    #shop-catcard .heading2 {
+        font-size: 30px !important;
+        padding: 0px 0px 0px 0px;
+    }
+
+    #shop-catcard .card-shop {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+    }
+
+    #shop-catcard img {
+        object-fit: contain;
+        width: 80px;
+    }
+
+    #categories .primary-text {
+        width: 300px;
+        height: auto;
+    }
+
+    #categories .heading2 {
+        font-size: 40px;
+    }
+
+    #discounts {
+        padding: 57px 0px 78px 0px;
+    }
+
+    #discounts .btn8 {
+        font-size: 18px !important;
+    }
+
+    #discounts .primary-text {
+        max-width: 483px;
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    #joydispensary .heading2 {
+        font-size: 30px;
+        line-height: 35px;
+    }
+
+    #joydispensary {
+        padding: 32px 0px 45px 0px;
+    }
+
+
+    #joydispensary .img-dis {
+        margin: 20px 0px 26px 0px;
+    }
+
+    /* footer */
+
+    #footer {
+        display: flex;
+        flex-direction: column-reverse;
+        margin: -1px 0px 0px 0px;
+    }
+
+    #foot1 span {
+        text-align: center;
+    }
+
+    #foot2 {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+
+    #footr {
+        display: block;
+    }
+
+    #footr .foot-icon li a {
+        padding: 2px 6px 4px 6px;
+    }
+
+    #footer hr {
+        display: none;
+    }
+
+    #footr .foot-plice li a {
+        font-size: 14px;
+        font-weight: 600;
+    }
+
+    #foot2 span {
+        font-size: 14px;
+        line-height: 16px;
+    }
+
+    #foot1 .img-foot-desktop {
+        display: none;
+    }
+
+    #foot1 .img-foot-mobile {
+        display: block;
+        margin: auto;
+        max-width: 550px;
+    }
+
+    #footer .img-logo-footer {
+        padding: 0px 0px;
+        margin: 0px auto;
+    }
+
+    #footr .list-inline {
+        margin-bottom: 10px;
+    }
+
+    #footl {
+        width: 100%;
+    }
+
+    #footr {
+        width: 100%;
+    }
+
+    #img-logo-desk {
+        display: none;
+    }
+
+    #img-logo-mobi {
+        display: block;
+    }
+
+    #Navbar .footer-toogle {
+        display: flex !important;
+        gap: 20px;
+    }
+
+    .list-inline-item:not(:last-child) {
+        margin-right: 53px !important;
+    }
+
+
+    #hero .heading1 {
+        animation-delay: 1s;
+    }
+
+    #Hero-banner {
+        animation-delay: 1s;
+    }
+
+}
+
+@media only screen and (max-width: 550px) {
+
+    #b1 .heading2 {
+        font-size: 48px;
+    }
+
+    /* store */
+    #foot1 .img-foot-mobile {
+        display: block;
+        max-width: 100%;
+    }
+
+    #joyride .joyride-btn p {
+        max-width: 300px;
+        font-size: 12px;
+    }
+
+}
+
+@media only screen and (max-width: 460px) {
+
+
+    #b1 .heading2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+
+    #b2 .primary-text {
+        font-size: 25px;
+        line-height: 30px;
+    }
+
+    #b2 .btn9 {
+        font-size: 13px !important;
+        width: 200px;
+        height: 45px;
+        margin: auto;
+    }
+
+    #hero h1 {
+        font-size: 35px;
+        line-height: 40px;
+    }
+
+    #Navbar .footer-toogle {
+        display: flex !important;
+        gap: 0px;
+    }
+
+    .btn2 {
+        font-size: 12px;
+        width: 90px;
+    }
+
+    #customer .card-job {
+        width: 100%;
+    }
+
+
+    #testimonial .fa-less-than,
+    .fa-greater-than {
+        font-size: 25px !important;
+    }
+
+    #shop-catcard .card-shop {
+        justify-content: space-evenly;
+        gap: 20px;
+    }
+
+    #categories .primary-text {
+        width: 220px !important;
+    }
+
+    #categories .row {
+        padding: 0px 0px;
+    }
+
+    #shop-catcard .card-shop {
+        display: block;
+    }
+
+    #shop-catcard .heading2 {
+        padding: 20px 0px 0px 0px !important;
+    }
+
+    #categories .heading2 {
+        line-height: 40px;
+        padding: 0px 0px 30px 0px;
+    }
+
+    #discounts .heading2 {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+
+    #discounts .primary-text {
+        max-width: 483px;
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+    #joydispensary .heading2 {
+        font-size: 22px;
+        line-height: 28px;
+    }
+
+}
+
+@media only screen and (max-width: 400px) {
+
+    #store .heading2 {
+        font-size: 20px;
+    }
+
+    #store .primary-text {
+        width: 237px;
+        font-size: 12px;
+        line-height: 15px;
+    }
+
+    #testimonial .card-testimonial {
+        height: 200px;
+    }
+
+    #joyride .form-joyride {
+        padding: 30px 10px;
+    }
+
+    #joy-content .heading2 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+    #store .btn3 {
+        width: 200px;
+        height: 50px;
+    }
+
+    #joyride .txtinput {
+        height: 40px;
+    }
+
+    #joyride .joyride-btn p {
+        max-width: 170px;
+        font-size: 10px;
+    }
+
+}
+
